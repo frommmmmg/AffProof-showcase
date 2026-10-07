@@ -4,30 +4,41 @@
 
 [English](README.md) · [中文](README.zh.md) · Español · [Deutsch](README.de.md) · [Français](README.fr.md)
 
+🌐 **[affproof.com](https://affproof.com)** · [GitHub @frommmmmg](https://github.com/frommmmmg)
+
 </div>
 
-> **Este repositorio es un escaparate, no una publicación de código.** AffProof es un proyecto privado, así que aquí no hay código: solo qué hace, cómo está construido y qué aspecto tiene. Si quieres hablar de él, escríbeme desde mi [perfil de GitHub](https://github.com/frommmmmg).
+> **Este repositorio es un escaparate, no una publicación de código.** AffProof no es de código abierto, así que aquí no hay código: solo qué hace, cómo está construido y qué aspecto tiene. Si quieres hablar de él, escríbeme desde mi [perfil de GitHub](https://github.com/frommmmmg).
 
 **Un directorio público y multilingüe que investiga los programas de afiliados para saber cuáles pagan de verdad.** Cada ficha incluye un expediente de diligencia debida con pruebas, una puntuación de reputación, comprobantes de pago y un historial de disputas.
 
-![La arquitectura: filtrado en el borde, un Worker de Hono y D1.](assets/affproof-architecture.svg)
+El marketing de afiliación está lleno de programas que parecen generosos en su página de aterrizaje y dejan de pagar discretamente cuando creces. La mayoría de los directorios copia lo que dice el propio proveedor. AffProof parte del otro extremo: registra lo que se puede comprobar (la página real del programa, los canales de pago que de verdad se ofrecen, las condiciones de comisión por escrito) y deja que la comunidad aporte lo que solo ella sabe, como si el dinero llegó. El lema es *Proof of payout. Zero fluff.*
 
-**Puntos clave**
+![Arquitectura](assets/affproof-architecture.svg)
 
-- **Serverless en el borde.** Todo el sitio corre en Cloudflare Workers con base de datos D1 (SQLite) y archivos estáticos servidos desde el borde. No hay ningún proceso de servidor permanente que mantener.
-- **Dos temas de interfaz completos, con cambio en vivo.** Un diseño denso en negro y dorado y otro de arcade de píxeles de 8 bits, con efectos de sonido opcionales. Un selector de ancho (1200, 768 y 390 px) previsualiza tamaños de tableta y móvil.
-- **Pensado para encontrar rápido el programa adecuado.** Búsqueda en vivo con filtros por plataforma, canal de pago y rango de tiempo, cuatro órdenes (recomendado, clics, subida de ranking, pruebas) y un filtro de auditoría oro.
+| | |
+|---|---|
+| **Sitio web** | **[affproof.com](https://affproof.com)**, en 8 idiomas |
+| **Mi papel** | Diseñado, construido y operado por una sola persona: producto, canalización de datos, front end, back end en el borde y operaciones |
+| **Estado** | En producción |
+| **Escala** | 380 programas indexados, 377 con expediente auditado completo (octubre de 2026) |
+| **Tecnología** | Cloudflare Workers · Hono · D1 · Workers Assets · GitHub Actions |
+
+### Qué hace
+
+**Para webmasters**
+- **Encontrar rápido el programa adecuado.** Búsqueda en vivo con filtros por plataforma, canal de pago y rango de tiempo, cuatro órdenes (recomendado, clics, subida de ranking, pruebas) y un filtro de auditoría oro.
 - **Una cuadrícula de canales estricta en vez de eslóganes.** Cada tarjeta muestra los mismos huecos fijos para USDT, PayPal, Payoneer, Stripe y canales de contacto, iluminados si existen y tachados si no, así las tarjetas se alinean y nada se puede maquillar.
-- **Reputación legible.** Una puntuación sobre 1000, registros de pago verificados y una ventana pública de disputa de 48 horas, en lugar de tasas de aprobación inventadas.
+- **Reputación legible.** Una puntuación sobre 1000 que sale del expediente, de una ventana móvil de 30 días de pruebas de pago y reseñas, de la actividad con decaimiento y de penalizaciones por disputas que el proveedor no respondió en 48 horas. Un proveedor que resuelve sus disputas se recupera solo.
+- **Dos temas de interfaz completos, con cambio en vivo:** un diseño denso en negro y dorado y otro de arcade de píxeles de 8 bits con sonido opcional. Un selector de ancho (1200, 768 y 390 px) previsualiza tamaños de tableta y móvil.
+
+**Para proveedores**
+- **Reclamar una ficha en unos diez segundos** e incrustar en su sitio una insignia SVG dinámica *Verified by AffProof*.
+
+**Para buscadores y desarrolladores**
 - **Renderizado en servidor pensado para buscadores.** Las páginas se generan dentro del Worker, con datos estructurados JSON-LD, etiquetas `hreflang` y un sitemap por idioma.
 - **8 idiomas**, con un flujo de traducción que mantiene todos los idiomas alineados con el original en inglés.
 - **Una API pública con planes.** Las claves se guardan como hashes SHA-256 y se validan en un middleware. Los planes Free, Pro y Enterprise controlan los límites de paginación y los campos devueltos.
-- **Datos con puertas de evidencia.** Cada expediente pasa una puntuación y un control de calidad antes de importarse, y las escrituras en la base de datos están diseñadas para no perder datos en silencio.
-- **Insignias SVG dinámicas** que otros sitios pueden incrustar, y **decisiones documentadas**: los registros de arquitectura y los análisis de errores viven junto al código.
-
-**Tecnología:** Cloudflare Workers · Hono · D1 · Workers Assets · GitHub Actions
-
-**En cifras (octubre de 2026):** 380 programas indexados, 377 de ellos con expediente auditado completo, en 8 idiomas.
 
 ## Capturas
 
@@ -63,6 +74,18 @@
 
 ![Un solo Worker genera todos los idiomas.](assets/affproof-locale-render.svg)
 *Un solo Worker genera todos los idiomas.*
+
+<!--notes-->
+## Notas de ingeniería
+
+- **Nativo del borde por decisión, no por moda.** No hay VPS, ni contenedores, ni procesos permanentes. El razonamiento está escrito como registro de decisión de arquitectura: cero arranque en frío, escala global y un coste en reposo casi nulo.
+- **Dos capas de protección de la API.** Las reglas del borde frenan primero los escaneos y las avalanchas; después el Worker comprueba la clave con hash, aplica la cuota del plan y devuelve solo los campos que ese plan puede ver. Las listas usan paginación por cursor, nunca `OFFSET` profundo.
+- **Operaciones tras Zero Trust.** La administración y la automatización están tras Cloudflare Access con tokens de servicio, de modo que el tráfico no autorizado se rechaza en el borde antes de llegar al Worker.
+- **Reputación que se recupera sola.** Los plazos de las disputas se evalúan de forma perezosa al leer la puntuación y la penalización se recalcula siempre con las disputas actuales. Un programa que ignora las disputas se cierra automáticamente y se reabre cuando se resuelven.
+- **Una regla dura aprendida de un incidente.** Una importación masiva usó una escritura de borrar y reinsertar y eliminó datos relacionados sin avisar. Ahora las importaciones actualizan las filas en su sitio y se concilian antes con el esquema. El análisis y la regla están escritos junto al código.
+- **Todo está documentado.** Decisiones de arquitectura, registros de errores, una guía de traducción y una política de calidad de datos viven en el repositorio, para que el siguiente cambio parta de las razones y no de suposiciones.
+
+**Otras muestras:** [Tonu.app](https://github.com/frommmmmg/Tonu.app-showcase) · [AutoPin-CS](https://github.com/frommmmmg/AutoPin-CS-showcase) · [AffiliateScraper](https://github.com/frommmmmg/AffiliateScraper-showcase)
 
 ---
 
