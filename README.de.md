@@ -6,6 +6,8 @@
 
 🌐 **[affproof.com](https://affproof.com)** · [GitHub @frommmmmg](https://github.com/frommmmmg)
 
+✍️ Von **姜芊泽 (Jiang Qianze)** · WeChat-Offizialkonto: **Pin海引航**
+
 </div>
 
 > **Dieses Repository ist ein Schaufenster, keine Quellcode-Veröffentlichung.** AffProof ist nicht quelloffen, deshalb gibt es hier keinen Code, nur was es kann, wie es gebaut ist und wie es aussieht. Wenn du darüber sprechen möchtest, melde dich über mein [GitHub-Profil](https://github.com/frommmmmg).
@@ -84,6 +86,18 @@ Im Affiliate-Marketing gibt es viele Programme, die auf der Landingpage großzü
 - **Selbstheilende Reputation.** Streitfrist-Ablauf wird beim Lesen des Werts träge ausgewertet, und der Abzug wird immer aus den aktuellen Streitfällen neu berechnet. Ein Programm, das Streitfälle ignoriert, wird automatisch geschlossen und öffnet wieder, sobald sie gelöst sind.
 - **Eine harte Regel aus einem Vorfall.** Ein Massenimport nutzte einmal einen Lösch-und-neu-Einfügen-Schreibzugriff und löschte unbemerkt verknüpfte Daten. Jetzt aktualisieren Importe Zeilen an Ort und Stelle und werden vorher mit dem Schema abgeglichen. Nachbetrachtung und Regel stehen neben dem Code.
 - **Alles ist dokumentiert.** Architekturentscheidungen, Fehlerprotokolle, ein Übersetzungsleitfaden und eine Datenqualitäts-Richtlinie liegen im Repository, damit die nächste Änderung von den Gründen ausgeht statt von Vermutungen.
+
+<!--author-->
+## Über den Autor
+
+<img src="assets/wechat-qr.png" alt="QR-Code des WeChat-Offizialkontos Pin海引航" width="200" align="right">
+
+**姜芊泽 (Jiang Qianze)** ist ein Pseudonym. Ich bin unabhängiger Entwickler und baue Werkzeuge, Daten und Automatisierung für Marken, Händler und Creator, die ins Ausland expandieren. Jedes Projekt in diesen Vorstellungen habe ich allein entworfen, gebaut und betrieben, von der Produktidee bis zu Servern und Dokumentation.
+
+Über diese Arbeit schreibe ich in meinem WeChat-Offizialkonto **Pin海引航** (auf Chinesisch). Scanne den Code, um ihm zu folgen, oder finde mich auf [GitHub](https://github.com/frommmmmg).
+
+<br clear="right">
+<!--/author-->
 
 **Weitere Projekte:** [Tonu.app](https://github.com/frommmmmg/Tonu.app-showcase) · [AutoPin-CS](https://github.com/frommmmmg/AutoPin-CS-showcase) · [AffiliateScraper](https://github.com/frommmmmg/AffiliateScraper-showcase)
 

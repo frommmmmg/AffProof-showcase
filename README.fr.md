@@ -6,6 +6,8 @@
 
 🌐 **[affproof.com](https://affproof.com)** · [GitHub @frommmmmg](https://github.com/frommmmmg)
 
+✍️ Par **姜芊泽 (Jiang Qianze)** · compte officiel WeChat: **Pin海引航**
+
 </div>
 
 > **Ce dépôt est une vitrine, pas une publication de code source.** AffProof n'est pas open source : il n'y a donc pas de code ici, seulement ce qu'il fait, comment il est construit et à quoi il ressemble. Pour en discuter, contactez-moi via mon [profil GitHub](https://github.com/frommmmmg).
@@ -84,6 +86,18 @@ Le marketing d'affiliation regorge de programmes qui semblent généreux sur leu
 - **Une réputation qui se rétablit toute seule.** Les échéances de litige sont évaluées paresseusement à la lecture du score et la pénalité est toujours recalculée à partir des litiges en cours. Un programme qui ignore les litiges est fermé automatiquement et rouvre dès qu'ils sont réglés.
 - **Une règle stricte tirée d'un incident.** Un import en masse a un jour utilisé une écriture de suppression puis réinsertion et effacé des données liées sans bruit. Désormais, les imports mettent les lignes à jour sur place et sont d'abord rapprochés du schéma. L'analyse et la règle sont écrites à côté du code.
 - **Tout est documenté.** Décisions d'architecture, journaux de bogues, guide de traduction et politique de qualité des données vivent dans le dépôt, pour que le changement suivant parte des raisons et non de suppositions.
+
+<!--author-->
+## À propos de l'auteur
+
+<img src="assets/wechat-qr.png" alt="QR code du compte officiel WeChat Pin海引航" width="200" align="right">
+
+**姜芊泽 (Jiang Qianze)** est un pseudonyme. Je suis un développeur indépendant qui crée des outils, des données et de l'automatisation pour les marques, marchands et créateurs qui visent l'international. Chaque projet de ces vitrines a été conçu, construit et exploité par moi seul, de l'idée du produit jusqu'aux serveurs et à la documentation.
+
+J'écris sur ce travail sur mon compte officiel WeChat, **Pin海引航** (en chinois). Scannez le code pour le suivre, ou retrouvez-moi sur [GitHub](https://github.com/frommmmmg).
+
+<br clear="right">
+<!--/author-->
 
 **Autres vitrines:** [Tonu.app](https://github.com/frommmmmg/Tonu.app-showcase) · [AutoPin-CS](https://github.com/frommmmmg/AutoPin-CS-showcase) · [AffiliateScraper](https://github.com/frommmmmg/AffiliateScraper-showcase)
 

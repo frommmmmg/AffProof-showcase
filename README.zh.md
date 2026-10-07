@@ -6,6 +6,8 @@
 
 🌐 **[affproof.com](https://affproof.com)** · [GitHub @frommmmmg](https://github.com/frommmmmg)
 
+✍️ 作者 **姜芊泽** · 微信公众号: **Pin海引航**
+
 </div>
 
 > **本仓库仅用于展示，不公开源码。** AffProof 不开源，所以这里没有代码，只介绍它做什么、怎么构建、长什么样。想聊聊它，请通过我的 [GitHub 主页](https://github.com/frommmmmg)联系我。
@@ -84,6 +86,18 @@
 - **会自我恢复的信誉分。** 纠纷截止时间在读取分数时惰性判定，扣分总是按当前纠纷重新计算。一个无视纠纷的项目会被自动关闭，纠纷解决后又会自动重开。
 - **一条从事故里学到的硬规则。** 有一次批量导入用了先删后插的写法，悄悄清掉了关联数据。现在导入一律原地更新，并先与表结构对账。复盘和规则都写在代码旁边。
 - **一切都有文档。** 架构决策、bug 记录、翻译指南和数据质量规范都在仓库里，下一次改动从理由出发，而不是靠猜。
+
+<!--author-->
+## 关于作者
+
+<img src="assets/wechat-qr.png" alt="微信公众号 Pin海引航 的二维码" width="200" align="right">
+
+**姜芊泽** 是我的笔名。我是一名独立开发者，致力于为出海品牌、商家和创作者提供工具、数据和自动化方案。这些展示里的每个项目，从产品想法到服务器和文档，都是我一个人设计、构建并运营的。
+
+我在微信公众号 **Pin海引航** 上写这方面的内容。扫码关注，或者到 [GitHub](https://github.com/frommmmmg) 找我。
+
+<br clear="right">
+<!--/author-->
 
 **其他项目展示:** [Tonu.app](https://github.com/frommmmmg/Tonu.app-showcase) · [AutoPin-CS](https://github.com/frommmmmg/AutoPin-CS-showcase) · [AffiliateScraper](https://github.com/frommmmmg/AffiliateScraper-showcase)
 

@@ -6,6 +6,8 @@
 
 🌐 **[affproof.com](https://affproof.com)** · [GitHub @frommmmmg](https://github.com/frommmmmg)
 
+✍️ Por **姜芊泽 (Jiang Qianze)** · cuenta oficial de WeChat: **Pin海引航**
+
 </div>
 
 > **Este repositorio es un escaparate, no una publicación de código.** AffProof no es de código abierto, así que aquí no hay código: solo qué hace, cómo está construido y qué aspecto tiene. Si quieres hablar de él, escríbeme desde mi [perfil de GitHub](https://github.com/frommmmmg).
@@ -84,6 +86,18 @@ El marketing de afiliación está lleno de programas que parecen generosos en su
 - **Reputación que se recupera sola.** Los plazos de las disputas se evalúan de forma perezosa al leer la puntuación y la penalización se recalcula siempre con las disputas actuales. Un programa que ignora las disputas se cierra automáticamente y se reabre cuando se resuelven.
 - **Una regla dura aprendida de un incidente.** Una importación masiva usó una escritura de borrar y reinsertar y eliminó datos relacionados sin avisar. Ahora las importaciones actualizan las filas en su sitio y se concilian antes con el esquema. El análisis y la regla están escritos junto al código.
 - **Todo está documentado.** Decisiones de arquitectura, registros de errores, una guía de traducción y una política de calidad de datos viven en el repositorio, para que el siguiente cambio parta de las razones y no de suposiciones.
+
+<!--author-->
+## Sobre el autor
+
+<img src="assets/wechat-qr.png" alt="Código QR de la cuenta oficial de WeChat Pin海引航" width="200" align="right">
+
+**姜芊泽 (Jiang Qianze)** es un seudónimo. Soy un desarrollador independiente que crea herramientas, datos y automatización para marcas, comerciantes y creadores que salen al mercado global. Cada proyecto de estas muestras lo he diseñado, construido y operado yo solo, desde la idea de producto hasta los servidores y la documentación.
+
+Escribo sobre este trabajo en mi cuenta oficial de WeChat, **Pin海引航** (en chino). Escanea el código para seguirla, o encuéntrame en [GitHub](https://github.com/frommmmmg).
+
+<br clear="right">
+<!--/author-->
 
 **Otras muestras:** [Tonu.app](https://github.com/frommmmmg/Tonu.app-showcase) · [AutoPin-CS](https://github.com/frommmmmg/AutoPin-CS-showcase) · [AffiliateScraper](https://github.com/frommmmmg/AffiliateScraper-showcase)
 
